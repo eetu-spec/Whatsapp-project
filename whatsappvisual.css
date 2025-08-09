@@ -4,6 +4,10 @@
 
 .date {text-align: center; background-color: aliceblue;}
 
-.person {background-color: grey;}
+.person {background-color: whitesmoke;}
+
+.bottombar {background-color: whitesmoke; position: fixed; bottom: 0;}
+
+.tausta {background-color: burlywood;}
 
 
