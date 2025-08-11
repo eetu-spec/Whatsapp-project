@@ -1,13 +1,16 @@
-.mies {
-  color: green; text-indent: 200px; background-color: greenyellow;
-}
-
 .date {text-align: center; background-color: aliceblue;}
 
-.person {background-color: whitesmoke;}
+.person {background-color: whitesmoke; position: fixed; top: 0;}
 
 .bottombar {background-color: whitesmoke; position: fixed; bottom: 0;}
 
 .wallpaper {background-color: burlywood;}
 
+.personname {display: inline;}
+
+.messageinsert {background-color: whitesmoke; position: fixed; bottom: 48px;}
+
+.messagefield {display: inline;}
+
+.me {background-color: #DCF8C6;}
 
