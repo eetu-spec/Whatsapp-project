@@ -6,11 +6,25 @@
 
 .wallpaper {background-color: burlywood;}
 
+body {font-family: Arial, Helvetica, sans-serif; font-size: larger;}
+
 .personname {display: inline;}
 
-.messageinsert {background-color: whitesmoke; position: fixed; bottom: 48px;}
+.messageinsert {background-color: whitesmoke; position: fixed; bottom: 10px;}
 
 .messagefield {display: inline;}
 
+ul {list-style: none;}
+
 .me {background-color: #DCF8C6;}
+
+li {background-color: whitesmoke; padding: 5px;}
+
+.personname {font-size: 20px;}
+
+.portrait {border-radius: 50%; height: 25px;}
+
+.online {font-size: small; color: gray;}
+
+
 
