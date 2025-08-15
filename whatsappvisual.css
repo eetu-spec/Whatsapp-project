@@ -1,6 +1,6 @@
 .date {text-align: center; background-color: aliceblue;}
 
-.person {background-color: whitesmoke; position: fixed; top: 0;}
+.person {background-color: whitesmoke; position: fixed; top: 0; }
 
 .bottombar {background-color: whitesmoke; position: fixed; bottom: 0;}
 
@@ -16,15 +16,30 @@ body {font-family: Arial, Helvetica, sans-serif; font-size: larger;}
 
 ul {list-style: none;}
 
-.me {background-color: #DCF8C6;}
+.me {background-color: #DCF8C6; padding-right: 65px; margin-left: 100px;}
 
-li {background-color: whitesmoke; padding: 5px;}
+li {
+    background-color: whitesmoke; 
+    padding: 0 2rem; 
+    margin: 13px; 
+    width: fit-content; 
+    padding-left: 20px; 
+    padding-right: 40px; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    min-width: 60px; 
+    max-width: 350px; 
+    margin-left: -25px; }
 
 .personname {font-size: 20px;}
 
 .portrait {border-radius: 50%; height: 25px;}
 
 .online {font-size: small; color: gray;}
+
+
+
+
 
 
 
