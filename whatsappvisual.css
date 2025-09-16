@@ -2,15 +2,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-size: cover;
+    height: 100%;
+    background: url("https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb9qk3w41sqf1l0ccujfh.png");
 }
 
 
 .chat {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     background: url("https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb9qk3w41sqf1l0ccujfh.png");
-
 }
 
 .navbar {
@@ -79,27 +81,15 @@ body {
 .bottombar {
     display: flex;
     position: relative; 
-    bottom: 35px;
+    bottom: 5px;
     border-radius: 60px;
     justify-content: center;
     align-items: center;
+    
+    background: url("https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb9qk3w41sqf1l0ccujfh.png");
 }
 
-.bottombar .messagefield {
-    display: block;
-    flex: 1;
-    width: 100%;
-    height: 30px;
-    border-radius: 60px;
-    margin: 10px;
-    padding: 10px;
-    outline: none;
-    font-size: 19px;
-    padding-left: 40px;
-    padding-right: 0px;
-    border: 2px solid #ccc
-    color #555
-}
+
 
 .bottombar .send {
     display: block;
@@ -113,8 +103,25 @@ body {
     outline: solid;
     outline-width: thin;
     outline-color: #128c7e;
-    
 }
+
+.bottombar .happy {
+    display: block;
+    flex: 1;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 16px;
+    top: 18px;
+
+}
+
+.bottombar-icons {
+    position: absolute;
+    right: 100px;
+    top: 19px;
+}
+
 
 ul {
     list-style: none;
@@ -140,6 +147,22 @@ li {
     margin-left: -25px;
     padding: 20px;
     border-radius: 10%;
+}
+
+.bottombar input {
+    display: block;
+    flex: 1;
+    width: 100%;
+    height: 30px;
+    border-radius: 60px;
+    margin: 0;
+    padding: 10px;
+    outline: none;
+    font-size: 17px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid #ccc
+    color #555
 }
 
 
