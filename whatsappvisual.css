@@ -120,6 +120,9 @@ body {
     position: absolute;
     right: 100px;
     top: 19px;
+    font-size: 25px;
+    display: block
+    flex 1;
 }
 
 

@@ -37,7 +37,7 @@
 
       <div class="chat-field">
         <div>
-          <ul>
+          <ul id="mylist">
 
             <li>lista lista lista</li>
 
@@ -71,21 +71,19 @@
 
       </div>
 
-      </div>
-
       <div class="bottombar">
 
         <ion-icon name="happy" class="happy"></ion-icon>
 
         <form>
-          <input placeholder="Message" type="text" id="Message"/>          
+          <input placeholder="Message" type="text" id="Message" name="Message" class="Message">         
         </form>
         <div class="bottombar-icons">
           <ion-icon name="attach"></ion-icon>
           <ion-icon name="camera"></ion-icon>
         </div>
         <ion-icon name="send" class="send"></ion-icon>
-        <button style="send" class="send" type="button">
+        <button class="send" type="button" id="add"></button>
 
       </div>
 
@@ -94,6 +92,24 @@
     
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </div>
+
+    <script>
+      const input = document.getElementById("Message");
+      const add = document.getElementById("add");
+      const list = document.getElementById("mylist")
+      add.addEventListener("click", (event) => {
+        if(input.value.trim() !== "") {
+        console.log(input.value);
+        const li = document.createElement("li");
+        const liText = document.createTextNode(input.value);
+        li.appendChild(liText);
+        list.appendChild(li);
+        input.value = "";
+        }
+      } );
+    </script>
+
+
   </body>
 
 </html>
