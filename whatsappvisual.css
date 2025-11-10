@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +15,7 @@ body {
 .chat {
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 100vh;
     background: url("https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb9qk3w41sqf1l0ccujfh.png");
 }
 
@@ -85,8 +89,9 @@ body {
     border-radius: 60px;
     justify-content: center;
     align-items: center;
+    background-color: whitesmoke;
     
-    background: url("https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb9qk3w41sqf1l0ccujfh.png");
+
 }
 
 

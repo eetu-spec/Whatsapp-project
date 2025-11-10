@@ -13,7 +13,6 @@
 
   <body>
     <div class="chat">
-      <div></div>
         <div class="navbar">
 
         <div class="navbar-left">
@@ -25,9 +24,8 @@
 
         </div>
 
-        <div class="navbar-right"
+        <div class="navbar-right">
           
-          <ion-icon name="videocam" class="videocam"></ion-icon>
           <ion-icon name="videocam" class="videocam"></ion-icon>
           <ion-icon name="call" class="call"></ion-icon>
           <ion-icon name="more" class="more"></ion-icon>
@@ -39,32 +37,32 @@
         <div>
           <ul id="mylist">
 
-            <li>lista lista lista</li>
+            <li class="right-chat">lista lista lista</li>
 
             <li class="left-chat">lista lista lista</li>
 
-            <li>lista lista lista</li>
+            <li class="right-chat">lista lista lista</li>
 
-            <li>lista</li>
-
-            <li class="left-chat">lista lista lista</li>
+            <li class="right-chat">lista</li>
 
             <li class="left-chat">lista lista lista</li>
 
-            <li>lista lista lista lista lista lista lista lista lista lista lista</li>
+            <li class="left-chat">lista lista lista</li>
 
-            <li>lista lista lista</li>
+            <li class="right-chat">lista lista lista lista lista lista lista lista lista lista lista</li>
+
+            <li class="right-chat">lista lista lista</li>
 
             <li class="left-chat">lista lista lista</li>
 
-            <li>lista lista lista</li>
+            <li class="right-chat">lista lista lista</li>
 
-            <li> 
+            <li class="right-chat"> 
             
             <img class="selfie" src="https://media.istockphoto.com/id/518091322/fi/valokuva/onnelliset-yst%C3%A4v%C3%A4t-hauskanpitoa-yhdess%C3%A4-selfien-kanssa-klubilla.webp?s=2048x2048&w=is&k=20&c=xr_W9gIK9cE9FvmUzIXC7sezeBiiokT9zCmsfTJZqO8=" alt="kuva nainen" width="280" />
             </li>
 
-            <li>lista lista lista</li>
+            <li class="right-chat">lista lista lista</li>
 
           </ul>
         </div>
@@ -101,9 +99,10 @@
         if(input.value.trim() !== "") {
         console.log(input.value);
         const li = document.createElement("li");
-        const liText = document.createTextNode(input.value);
-        li.appendChild(liText);
+        li.classList.add("left-chat");
+        li.textContent = input.value;
         list.appendChild(li);
+        list.scrollTop = list.scrollHeight;
         input.value = "";
         }
       } );
