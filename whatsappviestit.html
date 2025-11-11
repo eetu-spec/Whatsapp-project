@@ -37,32 +37,32 @@
         <div>
           <ul id="mylist">
 
-            <li class="right-chat">lista lista lista</li>
+            <li class="white-chat">lista lista lista</li>
 
-            <li class="left-chat">lista lista lista</li>
+            <li class="green-chat">lista lista lista</li>
 
-            <li class="right-chat">lista lista lista</li>
+            <li class="white-chat">lista lista lista</li>
 
-            <li class="right-chat">lista</li>
+            <li class="white-chat">lista</li>
 
-            <li class="left-chat">lista lista lista</li>
+            <li class="green-chat">lista lista lista</li>
 
-            <li class="left-chat">lista lista lista</li>
+            <li class="green-chat">lista lista lista</li>
 
-            <li class="right-chat">lista lista lista lista lista lista lista lista lista lista lista</li>
+            <li class="white-chat">lista lista lista lista lista lista lista lista lista lista lista</li>
 
-            <li class="right-chat">lista lista lista</li>
+            <li class="white-chat">lista lista lista</li>
 
-            <li class="left-chat">lista lista lista</li>
+            <li class="green-chat">lista lista lista</li>
 
-            <li class="right-chat">lista lista lista</li>
+            <li class="white-chat">lista lista lista</li>
 
-            <li class="right-chat"> 
+            <li class="white-chat"> 
             
             <img class="selfie" src="https://media.istockphoto.com/id/518091322/fi/valokuva/onnelliset-yst%C3%A4v%C3%A4t-hauskanpitoa-yhdess%C3%A4-selfien-kanssa-klubilla.webp?s=2048x2048&w=is&k=20&c=xr_W9gIK9cE9FvmUzIXC7sezeBiiokT9zCmsfTJZqO8=" alt="kuva nainen" width="280" />
             </li>
 
-            <li class="right-chat">lista lista lista</li>
+            <li class="white-chat">lista lista lista</li>
 
           </ul>
         </div>
@@ -80,26 +80,47 @@
           <ion-icon name="attach"></ion-icon>
           <ion-icon name="camera"></ion-icon>
         </div>
-        <ion-icon name="send" class="send"></ion-icon>
-        <button class="send" type="button" id="add"></button>
+
+        <button type="button" id="addRight">
+          <ion-icon name="send" class="send"></ion-icon>
+        </button>
+
+
+        <button class="receive" type="button" id="addLeft"></button>
+
+
 
       </div>
+
 
     </div>
 
     
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    </div>
 
     <script>
       const input = document.getElementById("Message");
-      const add = document.getElementById("add");
       const list = document.getElementById("mylist")
-      add.addEventListener("click", (event) => {
+      const addRight = document.getElementById("addRight");
+      const addLeft = document.getElementById("addLeft");
+
+      addRight.addEventListener("click", (event) => {
         if(input.value.trim() !== "") {
         console.log(input.value);
         const li = document.createElement("li");
-        li.classList.add("left-chat");
+        li.classList.add("green-chat");
+        li.textContent = input.value;
+        list.appendChild(li);
+        list.scrollTop = list.scrollHeight;
+        input.value = "";
+        }
+      } );
+
+      addLeft.addEventListener("click", (event) => {
+        if(input.value.trim() !== "") {
+        console.log(input.value);
+        const li = document.createElement("li");
+        li.classList.add("white-chat");
         li.textContent = input.value;
         list.appendChild(li);
         list.scrollTop = list.scrollHeight;

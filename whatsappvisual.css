@@ -89,18 +89,16 @@ body {
     border-radius: 60px;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: none;
     
-
 }
 
 
-
 .bottombar .send {
-    display: block;
+    display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 20px;
+    margin-right: -25px;
     color: white;
     background: #25d366;
     padding: 1em;
@@ -108,6 +106,15 @@ body {
     outline: solid;
     outline-width: thin;
     outline-color: #128c7e;
+}
+
+.bottombar .receive {
+    width: 20px;
+    height: 20px;
+    margin-right: 40px;
+    padding: 2em;
+    right: 40px;
+
 }
 
 .bottombar .happy {
@@ -123,7 +130,7 @@ body {
 
 .bottombar-icons {
     position: absolute;
-    right: 100px;
+    right: 10px;
     top: 19px;
     font-size: 25px;
     display: block
@@ -136,7 +143,7 @@ ul {
     padding: 19px;
 }
 
-.left-chat {
+.green-chat {
     background-color: #DCF8C6;
     padding-right: 65px;
     margin-left: 100px;
