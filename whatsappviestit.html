@@ -104,6 +104,21 @@
       const addRight = document.getElementById("addRight");
       const addLeft = document.getElementById("addLeft");
 
+      const responses = [
+        "hi",
+        "is it me youre looking for",
+        "vittu",
+        "kyl se panee",
+        "joo, todellakin",
+        "ootko mis",
+        "hei tuu tänne",
+        "vois mennä mäkkärii"
+      ];
+
+      let responseIndex = 0;
+
+
+
       addRight.addEventListener("click", (event) => {
         if(input.value.trim() !== "") {
         console.log(input.value);
@@ -117,14 +132,13 @@
       } );
 
       addLeft.addEventListener("click", (event) => {
-        if(input.value.trim() !== "") {
-        console.log(input.value);
+        if (responseIndex < responses.length) {
         const li = document.createElement("li");
         li.classList.add("white-chat");
-        li.textContent = input.value;
+        li.textContent = responses[responseIndex];
         list.appendChild(li);
         list.scrollTop = list.scrollHeight;
-        input.value = "";
+        responseIndex++;
         }
       } );
     </script>
