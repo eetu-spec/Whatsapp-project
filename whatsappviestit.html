@@ -133,12 +133,14 @@
 
       addLeft.addEventListener("click", (event) => {
         if (responseIndex < responses.length) {
-        const li = document.createElement("li");
-        li.classList.add("white-chat");
-        li.textContent = responses[responseIndex];
-        list.appendChild(li);
-        list.scrollTop = list.scrollHeight;
-        responseIndex++;
+          setTimeout(() => {
+          const li = document.createElement("li");
+          li.classList.add("white-chat");
+          li.textContent = responses[responseIndex];
+          list.appendChild(li);
+          list.scrollTop = list.scrollHeight;
+          responseIndex++;
+          }, 3000);
         }
       } );
     </script>
