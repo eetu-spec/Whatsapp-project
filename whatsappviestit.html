@@ -133,14 +133,33 @@
 
       addLeft.addEventListener("click", (event) => {
         if (responseIndex < responses.length) {
+
           setTimeout(() => {
-          const li = document.createElement("li");
-          li.classList.add("white-chat");
-          li.textContent = responses[responseIndex];
-          list.appendChild(li);
+
+          const typing = document.createElement("li");
+          typing.classList.add("white-chat");
+          typing.textContent = "Typing...";
+          list.appendChild(typing);
           list.scrollTop = list.scrollHeight;
-          responseIndex++;
-          }, 3000);
+
+          let dots = 0;
+          const typingInterval = setInterval(() => {
+            dots = (dots + 1) % 4;
+            typing.textContent = "Typing" + "." .repeat(dots);
+            list.scrollTop = list.scrollHeight;
+          }, 500);
+
+          setTimeout(() => {
+            clearInterval(typingInterval);
+            typing.remove();
+            const li = document.createElement("li");
+            li.classList.add("white-chat");
+            li.textContent = responses[responseIndex];
+            list.appendChild(li);
+            list.scrollTop = list.scrollHeight;
+            responseIndex++;
+          }, 4000);
+        }, 1000);
         }
       } );
     </script>
