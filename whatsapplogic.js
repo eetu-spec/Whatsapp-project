@@ -1,0 +1,66 @@
+document.addEventListener("DOMContentLoaded", () => {    
+    const input = document.getElementById("Message");
+    const list = document.getElementById("mylist")
+    const addRight = document.getElementById("addRight");
+    const addLeft = document.getElementById("addLeft");
+
+    const responses = [
+        "hi",
+        "is it me youre looking for",
+        "vittu",
+        "kyl se panee",
+        "joo, todellakin",
+        "ootko mis",
+        "hei tuu tänne",
+        "vois mennä mäkkärii"
+      ];
+
+    let responseIndex = 0;
+
+
+
+    addRight.addEventListener("click", (event) => {
+        if(input.value.trim() !== "") {
+            console.log(input.value);
+            const li = document.createElement("li");
+            li.classList.add("green-chat");
+            li.textContent = input.value;
+            list.appendChild(li);
+            list.scrollTop = list.scrollHeight;
+            input.value = "";
+        }
+      });
+
+    addLeft.addEventListener("click", (event) => {
+        if (responseIndex < responses.length) {
+
+            setTimeout(() => {
+
+            const typing = document.createElement("li");
+            typing.classList.add("white-chat");
+            typing.textContent = "Typing...";
+            list.appendChild(typing);
+            list.scrollTop = list.scrollHeight;
+
+            let dots = 0;
+            const typingInterval = setInterval(() => {
+                dots = (dots + 1) % 4;
+                typing.textContent = "Typing" + ".".repeat(dots);
+                list.scrollTop = list.scrollHeight;
+            }, 500);
+
+            setTimeout(() => {
+                clearInterval(typingInterval);
+                typing.remove();
+                const li = document.createElement("li");
+                li.classList.add("white-chat");
+                li.textContent = responses[responseIndex];
+                list.appendChild(li);
+                list.scrollTop = list.scrollHeight;
+                responseIndex++;
+            }, 4000);
+
+        }, 1000);
+    }
+    } );
+});
