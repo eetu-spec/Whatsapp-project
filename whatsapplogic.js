@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const addLeft = document.getElementById("addLeft");
 
     const responses = [
-        "hi",
-        "is it me youre looking for",
-        "vittu",
-        "kyl se panee",
+        "moi",
+        "ootko mua kaipaillu",
+        "en ole slut",
+        "mut vois tehdä joitai kivaa ;)",
         "joo, todellakin",
         "ootko mis",
         "hei tuu tänne",
@@ -63,4 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     }
     } );
+
+
+    const incomingCall = document.getElementById("incomingCall");
+    const fakeCallbutton = document.getElementById("fakeCallbutton");
+
+    fakeCallbutton.addEventListener("click", () => {
+        incomingCall.style.display = "block";
+
+    });
 });
