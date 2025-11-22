@@ -68,16 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const incomingCall = document.getElementById("incomingCall");
     const fakeCallbutton = document.getElementById("fakeCallbutton");
 
-    fakeCallbutton.addEventListener("click", () => {
-        incomingCall.style.display = "block";
-
-    });
+    const personname = document.querySelector(".personname").textContent;
 
     const declineButton = document.getElementById("declinecall");
     const acceptButton = document.getElementById("acceptcall");
 
     const ongoingCall = document.getElementById("ongoingCall");
     const endcallbutton = document.getElementById("endcall");
+
+    fakeCallbutton.addEventListener("click", () => {
+        incomingCall.style.display = "block";
+
+    });
 
     declineButton.addEventListener("click", () => {
         incomingCall.style.display = "none";
@@ -94,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const li = document.createElement("li");
         li.classList.add("white-chat");
-        li.textContent = "Call with Antti ended";
+        li.textContent = `Call with ${personname} ended`;
         list.appendChild(li);
         list.scrollTop = list.scrollHeight;
         
