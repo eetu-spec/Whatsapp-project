@@ -72,4 +72,31 @@ document.addEventListener("DOMContentLoaded", () => {
         incomingCall.style.display = "block";
 
     });
+
+    const declineButton = document.getElementById("declinecall");
+    const acceptButton = document.getElementById("acceptcall");
+
+    const ongoingCall = document.getElementById("ongoingCall");
+    const endcallbutton = document.getElementById("endcall");
+
+    declineButton.addEventListener("click", () => {
+        incomingCall.style.display = "none";
+        ongoingCall.style.display = "none";
+    });
+
+    acceptButton.addEventListener("click", () => {
+        incomingCall.style.display = "none";
+        ongoingCall.style.display = "block";
+    })
+
+    endcallbutton.addEventListener("click", () => {
+        ongoingCall.style.display = "none";
+
+        const li = document.createElement("li");
+        li.classList.add("white-chat");
+        li.textContent = "Call with Antti ended";
+        list.appendChild(li);
+        list.scrollTop = list.scrollHeight;
+        
+    });
 });
