@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -76,17 +83,16 @@ body {
 }
 
 .chat-field {
-    padding-left: 20px;
-    padding-right: 20px;
-    overflow-y: auto;
-    height: 400px;
     flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    min-height: 0;
 }
 
 .bottombar {
     display: flex;
-    position: relative; 
-    bottom: 5px;
+    height: 60px;
+    padding: 10px;
     border-radius: 60px;
     justify-content: center;
     align-items: center;
@@ -141,15 +147,22 @@ body {
 
 ul {
     list-style: none;
-    padding: 19px;
+    padding: 0;
+    margin: 0;
 }
 
 .green-chat {
     background-color: #DCF8C6;
     padding-right: 65px;
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: 0;
     padding: 10px;
 }
+
+.white-chat {
+    margin-left: 0;
+    margin-right: auto;
+} 
 
 li {
     background-color: white; 

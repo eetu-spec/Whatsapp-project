@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const addRight = document.getElementById("addRight");
     const addLeft = document.getElementById("addLeft");
 
+    const chatField = document.querySelector(".chat-field");
+
     const responses = [
         "moi",
         "ootko mua kaipaillu",
@@ -22,11 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     addRight.addEventListener("click", (event) => {
         if(input.value.trim() !== "") {
             console.log(input.value);
+
             const li = document.createElement("li");
             li.classList.add("green-chat");
             li.textContent = input.value;
             list.appendChild(li);
-            list.scrollTop = list.scrollHeight;
+            li.scrollIntoView({ behavior: "instant", block: "end"});
             input.value = "";
         }
       });
@@ -40,7 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
             typing.classList.add("white-chat");
             typing.textContent = "Typing...";
             list.appendChild(typing);
-            list.scrollTop = list.scrollHeight;
+
+            setTimeout(() => {
+                chatField.scrollTop = chatField.scrollHeight;
+            }, 0);
 
             let dots = 0;
             const typingInterval = setInterval(() => {
@@ -56,7 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 li.classList.add("white-chat");
                 li.textContent = responses[responseIndex];
                 list.appendChild(li);
-                list.scrollTop = list.scrollHeight;
+                setTimeout(() => {
+                    chatField.scrollTop = chatField.scrollHeight;
+                }, 0);
                 responseIndex++;
             }, 4000);
 
@@ -98,7 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
         li.classList.add("white-chat");
         li.textContent = `Call with ${personname} ended`;
         list.appendChild(li);
-        list.scrollTop = list.scrollHeight;
+        setTimeout(() => {
+            chatField.scrollTop = chatField.scrollHeight;
+        }, 0);
         
     });
 });
