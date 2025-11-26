@@ -91,6 +91,10 @@ body {
 
 .bottombar {
     display: flex;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
     height: 60px;
     padding: 10px;
     border-radius: 60px;
