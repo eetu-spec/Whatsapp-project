@@ -34,6 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            addRight.click();
+        }
+      });
+
     addLeft.addEventListener("click", (event) => {
         if (responseIndex < responses.length) {
 
