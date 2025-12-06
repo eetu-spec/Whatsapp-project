@@ -27,6 +27,7 @@ body {
 }
 
 .navbar {
+    flex: 0 0 60px;
     background-color: whitesmoke;  
     top: 0;
     display: flex;
@@ -83,24 +84,26 @@ body {
 }
 
 .chat-field {
-    flex: 1;
+    flex: 1 1 auto;
     padding: 20px;
     overflow-y: auto;
     min-height: 0;
+    padding-bottom: 110px;
 }
 
 .bottombar {
+    flex: 0 0 60px;
     display: flex;
     bottom: 0;
     left: 0;
-    position: fixed;
+    position: absolute;
     z-index: 1000;
     height: 60px;
     padding: 10px;
     border-radius: 60px;
     justify-content: center;
     align-items: center;
-    background-color: none;
+    background-color: white;
     
 }
 
@@ -230,6 +233,10 @@ li {
     background: #333;
     border-radius: 10px;
     
+}
+
+.Message {
+    position: bottom;
 }
 
 

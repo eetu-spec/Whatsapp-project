@@ -8,13 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const responses = [
         "moi",
-        "ootko mua kaipaillu",
-        "en ole slut",
-        "mut vois tehdä joitai kivaa ;)",
-        "joo, todellakin",
-        "ootko mis",
+        "lol",
+        "en ole kotona",
+        "vois käydä pizzal",
+        "joo hei",
+        "ootko mis päin",
         "hei tuu tänne",
-        "vois mennä mäkkärii"
+        "moi",
+        "silleen joo",
+        "en ole tyhmä",
+        "tai mäkkäri",
+        "joo hei",
+        "ootko mis",
+        "hei mennäää",
+        "vai ootko vihanen",
+        "vois mennä tyylii mäkkärii"
       ];
 
     let responseIndex = 0;
@@ -29,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
             li.classList.add("green-chat");
             li.textContent = input.value;
             list.appendChild(li);
-            li.scrollIntoView({ behavior: "instant", block: "end"});
+            setTimeout(() => {
+                chatField.scrollTop = chatField.scrollHeight;
+            }, 0);
             input.value = "";
         }
       });
