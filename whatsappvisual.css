@@ -179,10 +179,10 @@ li {
     justify-content: center;
     align-items: center;
     min-width: 60px; 
-    max-width: 350px; 
+    max-width: 270px; 
     margin-left: -25px;
-    padding: 20px;
-    border-radius: 10%;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .bottombar input {
