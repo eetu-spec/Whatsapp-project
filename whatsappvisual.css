@@ -88,7 +88,7 @@ body {
     padding: 20px;
     overflow-y: auto;
     min-height: 0;
-    padding-bottom: 110px;
+    padding-bottom: 130px;
 }
 
 .bottombar {
@@ -112,7 +112,8 @@ body {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: -25px;
+    margin-right: -20px;
+    margin-left: 3px;
     color: white;
     background: #25d366;
     padding: 1em;
@@ -133,12 +134,11 @@ body {
 
 .bottombar .happy {
     display: block;
-    flex: 1;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 16px;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
     top: 18px;
+    color: #666;
 
 }
 
@@ -239,7 +239,18 @@ li {
     position: bottom;
 }
 
+.receive {
+    opacity: 0;
+}
 
+#addRight {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    margin-left: 3px;
+}
 
 
 
