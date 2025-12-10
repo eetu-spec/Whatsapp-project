@@ -177,8 +177,7 @@ li {
     margin: 13px; 
     width: fit-content;
     justify-content: center;
-    align-items: center;
-    min-width: 60px; 
+    align-items: center; 
     max-width: 270px; 
     margin-left: -25px;
     padding: 10px;
