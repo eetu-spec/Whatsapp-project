@@ -7,22 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatField = document.querySelector(".chat-field");
 
     const responses = [
-        "moi",
-        "lol",
-        "en ole kotona",
-        "vois käydä pizzal",
-        "joo hei",
-        "ootko mis päin",
-        "hei tuu tänne",
-        "moi",
-        "silleen joo",
-        "en ole tyhmä",
-        "tai mäkkäri",
-        "joo hei",
-        "ootko mis",
-        "hei mennäää",
-        "vai ootko vihanen",
-        "vois mennä tyylii mäkkärii"
+        "oh?",
+        "do you want to meet me?",
+        "going to eat soon",
+        "my friend is leaving too",
+        "are you near kamppi",
+        "soundd goood",
+        "you can show me around",
+        "my private helsinki guide",
+        "lol"
       ];
 
     let responseIndex = 0;
