@@ -20,6 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let responseIndex = 0;
 
+    function getCurrentTime() {
+        const now = new Date();
+        let h = now.getHours();
+        let m = now.getMinutes();
+
+        if (m < 10) m = "0" + m;
+
+        return `${h}:${m}`;
+
+    }
+
 
 
     addRight.addEventListener("click", (event) => {
@@ -28,7 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const li = document.createElement("li");
             li.classList.add("green-chat");
-            li.textContent = input.value;
+
+            const time = getCurrentTime();
+
+            li.innerHTML = `
+
+            <span class="msg-text">${input.value}</span>
+            <span class="msg-meta">
+            <span class="timestamp">${time}</span>
+            <span class="ticks">✓✓</span>
+            </span>
+            `;
+
             list.appendChild(li);
             setTimeout(() => {
                 chatField.scrollTop = chatField.scrollHeight;
