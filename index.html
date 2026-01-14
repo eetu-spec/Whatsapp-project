@@ -57,7 +57,7 @@
 
             <li class="white-chat"> 
             
-            <img class="selfie" src="https://static.vecteezy.com/system/resources/thumbnails/015/254/961/small/two-beautiful-girls-dancing-in-front-of-young-people-that-having-fun-in-night-club-with-colorful-laser-lights-photo.jpg" alt="kuva nainen" width="280" />
+            <img class="selfie" src="https://static.vecteezy.com/system/resources/thumbnails/015/254/961/small/two-beautiful-girls-dancing-in-front-of-young-people-that-having-fun-in-night-club-with-colorful-laser-lights-photo.jpg" alt="kuva nainen" width="250" />
             </li>
 
             <li class="white-chat">Where are you now?</li>
@@ -70,17 +70,17 @@
 
         <ion-icon id="fakeCallbutton" name="happy" class="happy"></ion-icon>
 
-        <form onsubmit="return false;">
+        <form onsubmit="return false;" class="msg-form">
           <input placeholder="Message" type="text" id="Message" name="Message" class="Message">         
         </form>
-        <div class="bottombar-icons">
-          <ion-icon name="attach"></ion-icon>
-          <ion-icon name="camera"></ion-icon>
-        </div>
+        <div class="actions">
+          <ion-icon name="attach" class="action-icon"></ion-icon>
+          <ion-icon name="camera" class="action-icon"></ion-icon>
 
-        <button type="button" id="addRight">
-          <ion-icon name="send" class="send"></ion-icon>
-        </button>
+          <button type="button" id="addRight" class="send-btn">
+          <ion-icon name="send" class="send-icon"></ion-icon>
+          </button>
+        </div>
 
 
         <button class="receive" type="button" id="addLeft"></button>

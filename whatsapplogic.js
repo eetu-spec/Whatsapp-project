@@ -31,6 +31,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    function upgradeExistingMessages () {
+        const allMessages = document.querySelectorAll("#mylist li");
+
+        allMessages.forEach(li => {
+
+            if (li.querySelector(".timestamp") || li.querySelector("ticks")) return;
+            if (li.querySelector("img")) return;
+
+            const time = getCurrentTime();
+            const text = li.textContent.trim();
+
+            if (li.classList.contains("green-chat")) {
+                li.innerHTML = `
+                <span class="msg-text">${text}</span>
+                <span class="msg-meta">
+                <span class="timestamp">${time}</span>
+                <span class="ticks">✓✓</span
+                </span>
+                `;
+            } else if (li.classList.contains("white-chat")) {
+                li.innerHTML = `
+                <span class="msg-text">${text}</span>
+                <span class="msg-meta">
+                <span class="timestamp">${time}</span>
+                </span>
+                `;
+            }
+        });
+    }
+
+    upgradeExistingMessages();
+
 
 
     addRight.addEventListener("click", (event) => {
@@ -92,7 +124,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 typing.remove();
                 const li = document.createElement("li");
                 li.classList.add("white-chat");
-                li.textContent = responses[responseIndex];
+
+                const time = getCurrentTime();
+                li.innerHTML = `
+                <span class="msg-text">${responses[responseIndex]}</span>
+                <span class="msg-meta">
+                <span class="timestamp">${time}</span>
+                </span>
+
+                `;
+                
                 list.appendChild(li);
                 setTimeout(() => {
                     chatField.scrollTop = chatField.scrollHeight;
